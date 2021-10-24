@@ -3,7 +3,7 @@ document.body.innerHTML = `
 
 <head>
 	<meta charset="utf-8"/>
-	
+	<title>The Intergalactic Journal of Science</title>
 	<style>
 		body {
 			display: grid;
@@ -12,7 +12,7 @@ document.body.innerHTML = `
 			padding-top: 32px;
 			padding-bottom: 32px;
 			
-			background-image: url("background.png");
+			background-image: url("/background.png");
 			background-attachment: fixed;
 		}
 		
@@ -28,18 +28,23 @@ document.body.innerHTML = `
 			font-family: serif;
 			line-height: 150%;
 		}
+		
+		.nav-link {
+			color: inherit;
+			text-decoration: none;
+			text-align: center;
+		}
 	</style>
 </head>
 
 <body>
 	<header style="color: white; text-align: center;">
-		<h1>The Intergalactic Journal of Science</h1>
+		<h1><a class="nav-link" href="/index.html">The Intergalactic Journal of Science</a></h1>
 	</header>
 	
 	<nav style="color: white; display: flex; font-weight: bold; justify-content: center; padding-bottom: 32px;">
-		<a style="text-align: center; padding-right: 28px;">About</a>
-		<a style="text-align: center; padding-right: 28px;">Articles</a>
-		<a style="text-align: center;">Newest</a>
+		<a class="nav-link" href="/entries.html" style="padding-right: 28px;">Entries</a>
+		<a class="nav-link">Newest</a>
 	</nav>
 	
 	<div id="content-display"></div>
